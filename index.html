@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Clara Sterling — Editorial & Brand Architect</title>
-  <meta name="description" content="A minimalistic and elegant hero section for Clara Sterling's creative portfolio, featuring soft contrast, refined typography, and modern interactions.">
+  <title>Spread — Find what's underpriced. Sell it for what it's worth.</title>
+  <meta name="description" content="AI that scans marketplaces, scores deals, and helps you relist in one tap. Stop scrolling. Start flipping.">
   
   <!-- Google Fonts: Open Sans (Primary) and Oswald (Accent) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@300..700&display=swap" rel="stylesheet">
   
   <!-- Main Stylesheet -->
   <link rel="stylesheet" href="styles.css">
@@ -23,12 +23,14 @@
   <!-- Header -->
   <header class="header">
     <div class="header-inner">
-      <a href="#" class="logo" id="logo">C.S<span>.</span></a>
+      <a href="#" class="logo" id="logo">Spread<span>.</span></a>
       <nav class="nav" aria-label="Main Navigation">
-        <a href="#work" class="nav-link">Work</a>
-        <a href="#about" class="nav-link">About</a>
-        <a href="#contact" class="nav-link">Contact</a>
+        <a href="#how-it-works" class="nav-link">How it works</a>
+        <a href="#niches" class="nav-link">Niches</a>
+        <a href="#pricing" class="nav-link">Pricing</a>
+        <a href="#faq" class="nav-link">FAQ</a>
       </nav>
+      <a href="#signup" class="nav-cta-btn">Join Waitlist</a>
     </div>
   </header>
 
@@ -36,35 +38,218 @@
   <main class="hero-section">
     <div class="hero-container">
       
-      <!-- Small Sub-headline -->
-      <span class="sub-headline" id="sub-headline">Editorial & Brand Architect</span>
+      <!-- Headline: Large & Attention-Grabbing (Accent Oswald Font) -->
+      <h1 class="headline" id="main-headline">
+        Find what's underpriced.<br>Sell it for what it's worth.
+      </h1>
       
-      <!-- Large Oswald Headline -->
-      <h1 class="headline" id="main-headline">Designing Matters of Depth, Texture, and Timeless Form</h1>
+      <!-- Supporting Text / Paragraph (Open Sans Font) -->
+      <p class="supporting-text">
+        AI that scans every marketplace, scores every deal, and helps you relist in one tap. Stop scrolling. Start flipping.
+      </p>
       
-      <!-- Rounded CTA Button -->
-      <a href="#contact" class="cta-button" id="cta-button">
-        <span>View Collection</span>
-        <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-      </a>
+      <!-- Dual CTA Buttons -->
+      <div class="cta-group">
+        <a href="#signup" class="cta-button" id="cta-waitlist">
+          <span>Join the Waitlist</span>
+        </a>
+        <a href="#deal" class="cta-link-button" id="cta-see-it-work">
+          <span>See it work</span>
+          <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      </div>
 
-      <!-- Centered Portrait Image Card with Large Radius -->
-      <div class="image-card-wrapper">
-        <div class="image-card" id="image-card">
-          <img src="assets/hero_portrait.png" alt="Clara Sterling — Portrait of a visual designer" class="hero-image">
-          <div class="image-overlay"></div>
+      <!-- Scrolling Marquee Tape Section -->
+      <div class="marquee-container">
+        <div class="marquee-track">
+          <div class="marquee-content">
+            <span>CAPTURE THE SPREAD</span><span class="marquee-dot">•</span>
+            <span>FLIP SMARTER</span><span class="marquee-dot">•</span>
+            <span>CAPTURE THE SPREAD</span><span class="marquee-dot">•</span>
+            <span>FLIP SMARTER</span><span class="marquee-dot">•</span>
+            <span>CAPTURE THE SPREAD</span><span class="marquee-dot">•</span>
+            <span>FLIP SMARTER</span><span class="marquee-dot">•</span>
+            <span>CAPTURE THE SPREAD</span><span class="marquee-dot">•</span>
+            <span>FLIP SMARTER</span><span class="marquee-dot">•</span>
+          </div>
+          <div class="marquee-content" aria-hidden="true">
+            <span>CAPTURE THE SPREAD</span><span class="marquee-dot">•</span>
+            <span>FLIP SMARTER</span><span class="marquee-dot">•</span>
+            <span>CAPTURE THE SPREAD</span><span class="marquee-dot">•</span>
+            <span>FLIP SMARTER</span><span class="marquee-dot">•</span>
+            <span>CAPTURE THE SPREAD</span><span class="marquee-dot">•</span>
+            <span>FLIP SMARTER</span><span class="marquee-dot">•</span>
+            <span>CAPTURE THE SPREAD</span><span class="marquee-dot">•</span>
+            <span>FLIP SMARTER</span><span class="marquee-dot">•</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Centered Interactive AI Deal Feed Dashboard Mockup -->
+      <div class="dashboard-wrapper">
+        <div class="dashboard-frame" id="dashboard-frame">
+          
+          <!-- Top window control panel -->
+          <div class="dashboard-top-bar">
+            <div class="window-controls">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+            </div>
+            <div class="scanner-status-container">
+              <span class="pulse-indicator"></span>
+              <span id="scanner-status" class="status-text">Scanning Facebook Marketplace...</span>
+            </div>
+          </div>
+          
+          <!-- Main application body -->
+          <div class="dashboard-body">
+            <div class="dashboard-header">
+              <h2>Arb Radar — Live Opportunities</h2>
+              <span class="deals-count-badge" id="deals-count">0 DEALS FOUND</span>
+            </div>
+            
+            <div class="deal-feed" id="deal-feed">
+              <!-- Deal Card 1 -->
+              <div class="deal-card" data-id="1">
+                <div class="deal-header">
+                  <span class="deal-route">
+                    <span class="platform fb">FB Marketplace</span>
+                    <span class="route-arrow">→</span>
+                    <span class="platform ebay">eBay</span>
+                  </span>
+                  <div class="ai-score-badge">
+                    <span class="score-label">AI SCORE</span>
+                    <span class="score-val">9.8</span>
+                  </div>
+                </div>
+                <div class="deal-main">
+                  <div class="deal-details">
+                    <h3 class="deal-title">Herman Miller Aeron Chair</h3>
+                    <div class="deal-pricing">
+                      <div class="price-col">
+                        <span class="price-lbl">Listed Price</span>
+                        <span class="price-val">$320</span>
+                      </div>
+                      <div class="price-col">
+                        <span class="price-lbl">Est. Resale</span>
+                        <span class="price-val">$750</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="deal-action-area">
+                    <div class="margin-box">
+                      <span class="margin-lbl">PROFIT SPREAD</span>
+                      <span class="margin-val">+$430</span>
+                    </div>
+                    <button class="relist-btn" onclick="triggerRelist(1, 'Herman Miller Aeron Chair', 430)">
+                      <span>1-Tap Relist</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Deal Card 2 -->
+              <div class="deal-card" data-id="2">
+                <div class="deal-header">
+                  <span class="deal-route">
+                    <span class="platform craig">Craigslist</span>
+                    <span class="route-arrow">→</span>
+                    <span class="platform backmarket">BackMarket</span>
+                  </span>
+                  <div class="ai-score-badge">
+                    <span class="score-label">AI SCORE</span>
+                    <span class="score-val">9.5</span>
+                  </div>
+                </div>
+                <div class="deal-main">
+                  <div class="deal-details">
+                    <h3 class="deal-title">iPhone 15 Pro Max 256GB</h3>
+                    <div class="deal-pricing">
+                      <div class="price-col">
+                        <span class="price-lbl">Listed Price</span>
+                        <span class="price-val">$580</span>
+                      </div>
+                      <div class="price-col">
+                        <span class="price-lbl">Est. Resale</span>
+                        <span class="price-val">$920</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="deal-action-area">
+                    <div class="margin-box">
+                      <span class="margin-lbl">PROFIT SPREAD</span>
+                      <span class="margin-val">+$340</span>
+                    </div>
+                    <button class="relist-btn" onclick="triggerRelist(2, 'iPhone 15 Pro Max 256GB', 340)">
+                      <span>1-Tap Relist</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Deal Card 3 -->
+              <div class="deal-card" data-id="3">
+                <div class="deal-header">
+                  <span class="deal-route">
+                    <span class="platform offerup">OfferUp</span>
+                    <span class="route-arrow">→</span>
+                    <span class="platform ebay">eBay</span>
+                  </span>
+                  <div class="ai-score-badge">
+                    <span class="score-label">AI SCORE</span>
+                    <span class="score-val">9.2</span>
+                  </div>
+                </div>
+                <div class="deal-main">
+                  <div class="deal-details">
+                    <h3 class="deal-title">Sony PlayStation 5 Disc</h3>
+                    <div class="deal-pricing">
+                      <div class="price-col">
+                        <span class="price-lbl">Listed Price</span>
+                        <span class="price-val">$240</span>
+                      </div>
+                      <div class="price-col">
+                        <span class="price-lbl">Est. Resale</span>
+                        <span class="price-val">$450</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="deal-action-area">
+                    <div class="margin-box">
+                      <span class="margin-lbl">PROFIT SPREAD</span>
+                      <span class="margin-val">+$210</span>
+                    </div>
+                    <button class="relist-btn" onclick="triggerRelist(3, 'Sony PlayStation 5 Disc', 210)">
+                      <span>1-Tap Relist</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
         </div>
       </div>
 
     </div>
   </main>
 
+  <!-- Success Toast Modal -->
+  <div class="toast-notification" id="relist-toast" role="alert" aria-live="assertive">
+    <div class="toast-icon">✓</div>
+    <div class="toast-content">
+      <span class="toast-title">Deal Successfully Relisted!</span>
+      <span class="toast-body" id="toast-text">AI listing drafted on eBay.</span>
+    </div>
+  </div>
+
   <!-- Footer -->
   <footer class="footer">
     <div class="footer-inner">
-      <div class="footer-item">© 2026 CLARA STERLING</div>
+      <div class="footer-item">© 2026 SPREAD TECHNOLOGY</div>
       
       <!-- Animated Scroll Indicator -->
       <div class="footer-item scroll-indicator">
