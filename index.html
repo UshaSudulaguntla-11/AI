@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clara Sterling — Editorial & Brand Architect</title>
+  <meta name="description" content="A minimalistic and elegant hero section for Clara Sterling's creative portfolio, featuring soft contrast, refined typography, and modern interactions.">
+  
+  <!-- Google Fonts: Open Sans (Primary) and Oswald (Accent) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+  
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Custom Cursor Elements (hidden on touch devices) -->
+  <div class="custom-cursor" id="custom-cursor"></div>
+  <div class="custom-cursor-follower" id="custom-cursor-follower"></div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="header-inner">
+      <a href="#" class="logo" id="logo">C.S<span>.</span></a>
+      <nav class="nav" aria-label="Main Navigation">
+        <a href="#work" class="nav-link">Work</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <main class="hero-section">
+    <div class="hero-container">
+      
+      <!-- Small Sub-headline -->
+      <span class="sub-headline" id="sub-headline">Editorial & Brand Architect</span>
+      
+      <!-- Large Oswald Headline -->
+      <h1 class="headline" id="main-headline">Designing Matters of Depth, Texture, and Timeless Form</h1>
+      
+      <!-- Rounded CTA Button -->
+      <a href="#contact" class="cta-button" id="cta-button">
+        <span>View Collection</span>
+        <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+
+      <!-- Centered Portrait Image Card with Large Radius -->
+      <div class="image-card-wrapper">
+        <div class="image-card" id="image-card">
+          <img src="assets/hero_portrait.png" alt="Clara Sterling — Portrait of a visual designer" class="hero-image">
+          <div class="image-overlay"></div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-item">© 2026 CLARA STERLING</div>
+      
+      <!-- Animated Scroll Indicator -->
+      <div class="footer-item scroll-indicator">
+        <span class="scroll-dot"></span>
+        <span>Scroll to Explore</span>
+      </div>
+      
+      <!-- Dynamic Clock displaying London local time -->
+      <div class="footer-item time-display" id="time-display">LONDON, UK — --:--:-- GMT</div>
+    </div>
+  </footer>
+
+  <!-- Premium Interactions script -->
+  <script src="script.js"></script>
+</body>
+</html>

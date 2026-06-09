@@ -1,0 +1,534 @@
+/* ==========================================================================
+   Design Tokens & CSS Variables
+   ========================================================================== */
+:root {
+  /* Colors */
+  --color-bg: #FBF5DD;          /* Soft Cream */
+  --color-bg-darker: #F4ECCF;   /* Derived darker cream for subtle depth */
+  --color-bg-light: #FDFBF4;    /* Light highlight cream */
+  --color-primary: #306029;     /* Deep Botanical Green */
+  --color-primary-rgb: 48, 96, 41;
+  --color-text-muted: rgba(48, 96, 41, 0.7);
+
+  /* Typography */
+  --font-primary: 'Open Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-accent: 'Oswald', sans-serif;
+
+  /* Layout */
+  --border-radius-large: 40px;  /* Smooth large corner radius for the image card */
+  --border-radius-pill: 50px;   /* Standard rounded button pill border-radius */
+  
+  /* Transitions */
+  --transition-smooth: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ==========================================================================
+   Base Styles & Reset
+   ========================================================================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  height: 100%;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-primary);
+  font-family: var(--font-primary);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  position: relative;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom Scrollbar for Sleek Editorial Feel */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(48, 96, 41, 0.2);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(48, 96, 41, 0.4);
+}
+
+/* Text Selection Styling */
+::selection {
+  background-color: var(--color-primary);
+  color: var(--color-bg);
+}
+
+/* ==========================================================================
+   Custom Cursor (Desktop Only)
+   ========================================================================== */
+.custom-cursor {
+  width: 8px;
+  height: 8px;
+  background-color: var(--color-primary);
+  border-radius: 50%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 9999;
+  transition: width 0.3s var(--transition-smooth), 
+              height 0.3s var(--transition-smooth), 
+              background-color 0.3s var(--transition-smooth);
+}
+
+.custom-cursor-follower {
+  width: 36px;
+  height: 36px;
+  border: 1px solid rgba(48, 96, 41, 0.3);
+  border-radius: 50%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 9998;
+  /* Very slight transition for lag effect */
+  transition: width 0.3s var(--transition-smooth), 
+              height 0.3s var(--transition-smooth), 
+              border-color 0.3s var(--transition-smooth), 
+              background-color 0.3s var(--transition-smooth);
+}
+
+/* ==========================================================================
+   Header & Navigation
+   ========================================================================== */
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 2.2rem 4rem;
+  z-index: 90;
+  box-sizing: border-box;
+}
+
+.header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-family: var(--font-accent);
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--color-primary);
+  letter-spacing: 0.05em;
+  transition: opacity 0.3s ease;
+  z-index: 100;
+}
+
+.logo span {
+  opacity: 0.5;
+}
+
+.logo:hover {
+  opacity: 0.8;
+}
+
+.nav {
+  display: flex;
+  gap: 2.5rem;
+}
+
+.nav-link {
+  font-family: var(--font-primary);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--color-primary);
+  text-decoration: none;
+  position: relative;
+  padding: 0.3rem 0;
+  transition: opacity 0.3s ease;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 1.5px;
+  background-color: var(--color-primary);
+  transition: width 0.4s var(--transition-smooth), left 0.4s var(--transition-smooth);
+}
+
+.nav-link:hover {
+  opacity: 0.9;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+/* ==========================================================================
+   Hero Section Layout
+   ========================================================================== */
+.hero-section {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  box-sizing: border-box;
+}
+
+/* Narrow container for focused layout, avoiding stretched content */
+.hero-container {
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+/* ==========================================================================
+   Hero Content Typography & Elements
+   ========================================================================== */
+
+/* Sub-headline: Small and understated */
+.sub-headline {
+  font-family: var(--font-primary);
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  color: var(--color-primary);
+  margin-bottom: 1.2rem;
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 1s var(--transition-smooth) forwards;
+  animation-delay: 0.2s;
+}
+
+/* Headline: Large, bold, and attention-grabbing (Accent Oswald Font) */
+.headline {
+  font-family: var(--font-accent);
+  font-size: clamp(2.4rem, 6.5vw, 3.8rem);
+  font-weight: 600;
+  line-height: 1.12;
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
+  color: var(--color-primary);
+  margin-bottom: 2.2rem;
+  max-width: 100%;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 1s var(--transition-smooth) forwards;
+  animation-delay: 0.4s;
+}
+
+/* CTA Button: Rounded corners, simple modern styling, medium size */
+.cta-button {
+  font-family: var(--font-primary);
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--color-bg);
+  background-color: var(--color-primary);
+  border: 1.5px solid var(--color-primary);
+  padding: 0.95rem 2.2rem;
+  border-radius: var(--border-radius-pill);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 4rem;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: background-color 0.4s var(--transition-smooth), 
+              color 0.4s var(--transition-smooth), 
+              transform 0.4s var(--transition-smooth), 
+              box-shadow 0.4s var(--transition-smooth);
+  
+  opacity: 0;
+  transform: translateY(25px);
+  animation: fadeUp 1s var(--transition-smooth) forwards;
+  animation-delay: 0.6s;
+  box-shadow: 0 4px 10px rgba(48, 96, 41, 0.05);
+}
+
+.cta-button .arrow-icon {
+  width: 15px;
+  height: 15px;
+  transition: transform 0.4s var(--transition-smooth);
+}
+
+/* Hover & Active States for CTA */
+.cta-button:hover {
+  background-color: transparent;
+  color: var(--color-primary);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(48, 96, 41, 0.1);
+}
+
+.cta-button:hover .arrow-icon {
+  transform: translateX(4px);
+}
+
+.cta-button:active {
+  transform: translateY(1px);
+}
+
+/* ==========================================================================
+   Portrait/Image Card
+   ========================================================================== */
+.image-card-wrapper {
+  width: 100%;
+  max-width: 440px;
+  perspective: 1000px; /* Enable 3D hover effects */
+  opacity: 0;
+  transform: translateY(40px) scale(0.97);
+  animation: imageReveal 1.3s var(--transition-smooth) forwards;
+  animation-delay: 0.8s;
+}
+
+.image-card {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  background-color: var(--color-bg-darker);
+  border-radius: var(--border-radius-large);
+  overflow: hidden;
+  position: relative;
+  /* Ambient shadow, extremely soft and subtle */
+  box-shadow: 0 25px 55px rgba(48, 96, 41, 0.06);
+  cursor: pointer;
+  /* Improves rendering smoothness for rounded borders on transforms */
+  transform: translate3d(0, 0, 0);
+  transition: transform 0.6s var(--transition-smooth), 
+              box-shadow 0.6s var(--transition-smooth);
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.8s var(--transition-smooth);
+}
+
+.image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* Soft overlay to blend image nicely with the color palette */
+  background: linear-gradient(to bottom, rgba(48, 96, 41, 0) 50%, rgba(48, 96, 41, 0.1));
+  pointer-events: none;
+  transition: opacity 0.6s var(--transition-smooth);
+}
+
+/* Hover effects for the image card */
+.image-card:hover {
+  transform: translateY(-10px) rotateX(1.5deg) rotateY(-1.5deg);
+  box-shadow: 0 35px 70px rgba(48, 96, 41, 0.12);
+}
+
+.image-card:hover .hero-image {
+  transform: scale(1.04);
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 2.2rem 4rem;
+  z-index: 90;
+  box-sizing: border-box;
+}
+
+.footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.68rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--color-text-muted);
+}
+
+.footer-item {
+  display: flex;
+  align-items: center;
+}
+
+/* Scroll indicator animation */
+.scroll-indicator {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.scroll-dot {
+  width: 6px;
+  height: 6px;
+  background-color: var(--color-primary);
+  border-radius: 50%;
+  animation: pulse 2s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.8);
+    opacity: 0.3;
+  }
+  50% {
+    transform: scale(1.4);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.8);
+    opacity: 0.3;
+  }
+}
+
+/* ==========================================================================
+   Animations
+   ========================================================================== */
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes imageReveal {
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* ==========================================================================
+   Responsive Styles
+   ========================================================================== */
+@media (max-width: 1024px) {
+  .header {
+    padding: 2rem 3rem;
+  }
+  .footer {
+    padding: 2rem 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 1.5rem;
+  }
+  
+  .nav {
+    gap: 1.5rem;
+  }
+  
+  .footer {
+    position: relative;
+    padding: 2.5rem 1.5rem;
+    margin-top: 1rem;
+    background-color: var(--color-bg);
+  }
+  
+  .footer-inner {
+    flex-direction: column;
+    gap: 1.2rem;
+    text-align: center;
+  }
+  
+  .hero-section {
+    padding-top: 120px;
+    padding-bottom: 20px;
+    min-height: calc(100vh - 120px);
+  }
+  
+  .hero-container {
+    padding: 0 1.2rem;
+  }
+  
+  .headline {
+    margin-bottom: 1.8rem;
+  }
+  
+  .cta-button {
+    margin-bottom: 3rem;
+  }
+  
+  .image-card-wrapper {
+    max-width: 360px;
+  }
+  
+  .image-card {
+    border-radius: 30px; /* Slightly smaller to match screen size proportions */
+  }
+}
+
+@media (max-width: 480px) {
+  .nav {
+    display: none; /* Hide nav links on very small mobile to maintain clean header */
+  }
+  
+  .logo {
+    font-size: 1.4rem;
+  }
+  
+  .sub-headline {
+    font-size: 0.72rem;
+    letter-spacing: 0.2em;
+    margin-bottom: 1rem;
+  }
+  
+  .headline {
+    margin-bottom: 1.5rem;
+  }
+  
+  .cta-button {
+    padding: 0.85rem 1.8rem;
+    font-size: 0.75rem;
+    margin-bottom: 2.5rem;
+  }
+}
