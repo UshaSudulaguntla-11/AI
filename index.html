@@ -1,268 +1,206 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Spread — Find what's underpriced. Sell it for what it's worth.</title>
-  <meta name="description" content="AI that scans marketplaces, scores deals, and helps you relist in one tap. Stop scrolling. Start flipping.">
-  
-  <!-- Google Fonts: Open Sans (Primary) and Oswald (Accent) -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@300..700&display=swap" rel="stylesheet">
-  
-  <!-- Main Stylesheet -->
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aura — Creative Portfolio</title>
+  <meta name="description" content="A premium personal brand hero section with minimal, elegant design." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- Custom Cursor Elements (hidden on touch devices) -->
-  <div class="custom-cursor" id="custom-cursor"></div>
-  <div class="custom-cursor-follower" id="custom-cursor-follower"></div>
-
-  <!-- Header -->
-  <header class="header">
-    <div class="header-inner">
-      <a href="#" class="logo" id="logo">Spread<span>.</span></a>
-      <nav class="nav" aria-label="Main Navigation">
-        <a href="#how-it-works" class="nav-link">How it works</a>
-        <a href="#niches" class="nav-link">Niches</a>
-        <a href="#pricing" class="nav-link">Pricing</a>
-        <a href="#faq" class="nav-link">FAQ</a>
-      </nav>
-      <a href="#signup" class="nav-cta-btn">Join Waitlist</a>
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">aura.</a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <a href="#contact" class="nav-cta" id="nav-cta-btn">Let's Talk</a>
+      <button class="nav-hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
     </div>
-  </header>
+  </nav>
 
-  <!-- Hero Section -->
-  <main class="hero-section">
+  <!-- ===== HERO SECTION ===== -->
+  <section class="hero" id="hero">
     <div class="hero-container">
-      
-      <!-- Headline: Large & Attention-Grabbing (Accent Oswald Font) -->
-      <h1 class="headline" id="main-headline">
-        Find what's underpriced.<br>Sell it for what it's worth.
-      </h1>
-      
-      <!-- Supporting Text / Paragraph (Open Sans Font) -->
-      <p class="supporting-text">
-        AI that scans every marketplace, scores every deal, and helps you relist in one tap. Stop scrolling. Start flipping.
-      </p>
-      
-      <!-- Dual CTA Buttons -->
-      <div class="cta-group">
-        <a href="#signup" class="cta-button" id="cta-waitlist">
-          <span>Join the Waitlist</span>
-        </a>
-        <a href="#deal" class="cta-link-button" id="cta-see-it-work">
-          <span>See it work</span>
-          <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </a>
-      </div>
 
-      <!-- Scrolling Marquee Tape Section -->
-      <div class="marquee-container">
-        <div class="marquee-track">
-          <div class="marquee-content">
-            <span>CAPTURE THE SPREAD</span><span class="marquee-dot">•</span>
-            <span>FLIP SMARTER</span><span class="marquee-dot">•</span>
-            <span>CAPTURE THE SPREAD</span><span class="marquee-dot">•</span>
-            <span>FLIP SMARTER</span><span class="marquee-dot">•</span>
-            <span>CAPTURE THE SPREAD</span><span class="marquee-dot">•</span>
-            <span>FLIP SMARTER</span><span class="marquee-dot">•</span>
-            <span>CAPTURE THE SPREAD</span><span class="marquee-dot">•</span>
-            <span>FLIP SMARTER</span><span class="marquee-dot">•</span>
-          </div>
-          <div class="marquee-content" aria-hidden="true">
-            <span>CAPTURE THE SPREAD</span><span class="marquee-dot">•</span>
-            <span>FLIP SMARTER</span><span class="marquee-dot">•</span>
-            <span>CAPTURE THE SPREAD</span><span class="marquee-dot">•</span>
-            <span>FLIP SMARTER</span><span class="marquee-dot">•</span>
-            <span>CAPTURE THE SPREAD</span><span class="marquee-dot">•</span>
-            <span>FLIP SMARTER</span><span class="marquee-dot">•</span>
-            <span>CAPTURE THE SPREAD</span><span class="marquee-dot">•</span>
-            <span>FLIP SMARTER</span><span class="marquee-dot">•</span>
-          </div>
+      <!-- Text Block -->
+      <div class="hero-text" id="hero-text">
+        <p class="sub-headline">Creative Director & Brand Strategist</p>
+        <h1 class="headline">Crafting Stories<br />That <em>Move</em> People</h1>
+        <p class="hero-desc">
+          I design premium brand identities and digital experiences<br />
+          that leave a lasting impression.
+        </p>
+        <div class="cta-group">
+          <a href="#work" class="cta-btn" id="cta-primary">Explore My Work</a>
+          <a href="#about" class="cta-link">About Me →</a>
         </div>
       </div>
 
-      <!-- Centered Interactive AI Deal Feed Dashboard Mockup -->
-      <div class="dashboard-wrapper">
-        <div class="dashboard-frame" id="dashboard-frame">
-          
-          <!-- Top window control panel -->
-          <div class="dashboard-top-bar">
-            <div class="window-controls">
-              <span class="dot red"></span>
-              <span class="dot yellow"></span>
-              <span class="dot green"></span>
-            </div>
-            <div class="scanner-status-container">
-              <span class="pulse-indicator"></span>
-              <span id="scanner-status" class="status-text">Scanning Facebook Marketplace...</span>
-            </div>
+      <!-- Image Card -->
+      <div class="hero-image-wrap" id="hero-image-wrap">
+        <div class="hero-image-card">
+          <img src="hero_portrait.png" alt="Creative professional portrait" class="hero-img" />
+          <div class="image-badge">
+            <span class="badge-dot"></span>
+            Available for projects
           </div>
-          
-          <!-- Main application body -->
-          <div class="dashboard-body">
-            <div class="dashboard-header">
-              <h2>Arb Radar — Live Opportunities</h2>
-              <span class="deals-count-badge" id="deals-count">0 DEALS FOUND</span>
+        </div>
+        <!-- Floating accent elements -->
+        <div class="float-tag float-tag-1">✦ Brand Identity</div>
+        <div class="float-tag float-tag-2">✦ UI / UX Design</div>
+      </div>
+
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="scroll-indicator" id="scroll-indicator">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT SECTION ===== -->
+  <section class="about-section" id="about">
+    <div class="section-container">
+      <div class="section-label">About</div>
+      <div class="about-grid">
+        <div class="about-left">
+          <h2 class="section-title">Design is thinking<br />made <em>visual.</em></h2>
+        </div>
+        <div class="about-right">
+          <p>With over 8 years of experience in brand design and digital strategy, I help businesses build identities that resonate. My work lives at the intersection of aesthetics and function.</p>
+          <p>From startups to established brands, every project is a collaboration built on trust, creativity, and a deep understanding of your audience.</p>
+          <div class="stats-row">
+            <div class="stat-item">
+              <span class="stat-num">120+</span>
+              <span class="stat-label">Projects</span>
             </div>
-            
-            <div class="deal-feed" id="deal-feed">
-              <!-- Deal Card 1 -->
-              <div class="deal-card" data-id="1">
-                <div class="deal-header">
-                  <span class="deal-route">
-                    <span class="platform fb">FB Marketplace</span>
-                    <span class="route-arrow">→</span>
-                    <span class="platform ebay">eBay</span>
-                  </span>
-                  <div class="ai-score-badge">
-                    <span class="score-label">AI SCORE</span>
-                    <span class="score-val">9.8</span>
-                  </div>
-                </div>
-                <div class="deal-main">
-                  <div class="deal-details">
-                    <h3 class="deal-title">Herman Miller Aeron Chair</h3>
-                    <div class="deal-pricing">
-                      <div class="price-col">
-                        <span class="price-lbl">Listed Price</span>
-                        <span class="price-val">$320</span>
-                      </div>
-                      <div class="price-col">
-                        <span class="price-lbl">Est. Resale</span>
-                        <span class="price-val">$750</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="deal-action-area">
-                    <div class="margin-box">
-                      <span class="margin-lbl">PROFIT SPREAD</span>
-                      <span class="margin-val">+$430</span>
-                    </div>
-                    <button class="relist-btn" onclick="triggerRelist(1, 'Herman Miller Aeron Chair', 430)">
-                      <span>1-Tap Relist</span>
-                    </button>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Deal Card 2 -->
-              <div class="deal-card" data-id="2">
-                <div class="deal-header">
-                  <span class="deal-route">
-                    <span class="platform craig">Craigslist</span>
-                    <span class="route-arrow">→</span>
-                    <span class="platform backmarket">BackMarket</span>
-                  </span>
-                  <div class="ai-score-badge">
-                    <span class="score-label">AI SCORE</span>
-                    <span class="score-val">9.5</span>
-                  </div>
-                </div>
-                <div class="deal-main">
-                  <div class="deal-details">
-                    <h3 class="deal-title">iPhone 15 Pro Max 256GB</h3>
-                    <div class="deal-pricing">
-                      <div class="price-col">
-                        <span class="price-lbl">Listed Price</span>
-                        <span class="price-val">$580</span>
-                      </div>
-                      <div class="price-col">
-                        <span class="price-lbl">Est. Resale</span>
-                        <span class="price-val">$920</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="deal-action-area">
-                    <div class="margin-box">
-                      <span class="margin-lbl">PROFIT SPREAD</span>
-                      <span class="margin-val">+$340</span>
-                    </div>
-                    <button class="relist-btn" onclick="triggerRelist(2, 'iPhone 15 Pro Max 256GB', 340)">
-                      <span>1-Tap Relist</span>
-                    </button>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Deal Card 3 -->
-              <div class="deal-card" data-id="3">
-                <div class="deal-header">
-                  <span class="deal-route">
-                    <span class="platform offerup">OfferUp</span>
-                    <span class="route-arrow">→</span>
-                    <span class="platform ebay">eBay</span>
-                  </span>
-                  <div class="ai-score-badge">
-                    <span class="score-label">AI SCORE</span>
-                    <span class="score-val">9.2</span>
-                  </div>
-                </div>
-                <div class="deal-main">
-                  <div class="deal-details">
-                    <h3 class="deal-title">Sony PlayStation 5 Disc</h3>
-                    <div class="deal-pricing">
-                      <div class="price-col">
-                        <span class="price-lbl">Listed Price</span>
-                        <span class="price-val">$240</span>
-                      </div>
-                      <div class="price-col">
-                        <span class="price-lbl">Est. Resale</span>
-                        <span class="price-val">$450</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="deal-action-area">
-                    <div class="margin-box">
-                      <span class="margin-lbl">PROFIT SPREAD</span>
-                      <span class="margin-val">+$210</span>
-                    </div>
-                    <button class="relist-btn" onclick="triggerRelist(3, 'Sony PlayStation 5 Disc', 210)">
-                      <span>1-Tap Relist</span>
-                    </button>
-                  </div>
-                </div>
-              </div>
-
+            <div class="stat-item">
+              <span class="stat-num">8+</span>
+              <span class="stat-label">Years Exp.</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-num">98%</span>
+              <span class="stat-label">Satisfaction</span>
             </div>
           </div>
         </div>
       </div>
-
     </div>
-  </main>
+  </section>
 
-  <!-- Success Toast Modal -->
-  <div class="toast-notification" id="relist-toast" role="alert" aria-live="assertive">
-    <div class="toast-icon">✓</div>
-    <div class="toast-content">
-      <span class="toast-title">Deal Successfully Relisted!</span>
-      <span class="toast-body" id="toast-text">AI listing drafted on eBay.</span>
+  <!-- ===== WORK SECTION ===== -->
+  <section class="work-section" id="work">
+    <div class="section-container">
+      <div class="section-label">Work</div>
+      <h2 class="section-title centered">Selected Projects</h2>
+      <div class="work-grid">
+        <div class="work-card" id="work-card-1">
+          <div class="work-card-img" style="background: linear-gradient(135deg, #306029 0%, #4a8a3c 100%);">
+            <span class="work-card-num">01</span>
+          </div>
+          <div class="work-card-info">
+            <h3>Verdana Organics</h3>
+            <p>Brand Identity & Packaging</p>
+          </div>
+        </div>
+        <div class="work-card" id="work-card-2">
+          <div class="work-card-img" style="background: linear-gradient(135deg, #7a6a3a 0%, #b5993e 100%);">
+            <span class="work-card-num">02</span>
+          </div>
+          <div class="work-card-info">
+            <h3>Lumis Studio</h3>
+            <p>Web Design & Strategy</p>
+          </div>
+        </div>
+        <div class="work-card" id="work-card-3">
+          <div class="work-card-img" style="background: linear-gradient(135deg, #3a5a6a 0%, #5a8fa0 100%);">
+            <span class="work-card-num">03</span>
+          </div>
+          <div class="work-card-info">
+            <h3>Crest Agency</h3>
+            <p>Digital Experience Design</p>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
+  </section>
 
-  <!-- Footer -->
+  <!-- ===== SERVICES SECTION ===== -->
+  <section class="services-section" id="services">
+    <div class="section-container">
+      <div class="section-label">Services</div>
+      <h2 class="section-title">What I Do</h2>
+      <div class="services-list">
+        <div class="service-item" id="service-1">
+          <div class="service-num">01</div>
+          <div class="service-content">
+            <h3>Brand Identity</h3>
+            <p>Logo systems, typography, color palettes, and brand guidelines that make you unforgettable.</p>
+          </div>
+          <div class="service-arrow">→</div>
+        </div>
+        <div class="service-item" id="service-2">
+          <div class="service-num">02</div>
+          <div class="service-content">
+            <h3>Web Design</h3>
+            <p>Beautiful, conversion-focused websites that balance aesthetics with performance.</p>
+          </div>
+          <div class="service-arrow">→</div>
+        </div>
+        <div class="service-item" id="service-3">
+          <div class="service-num">03</div>
+          <div class="service-content">
+            <h3>Creative Direction</h3>
+            <p>Strategic visual storytelling across campaigns, content, and digital channels.</p>
+          </div>
+          <div class="service-arrow">→</div>
+        </div>
+        <div class="service-item" id="service-4">
+          <div class="service-num">04</div>
+          <div class="service-content">
+            <h3>UI / UX Design</h3>
+            <p>User-centered product design that turns complex problems into intuitive experiences.</p>
+          </div>
+          <div class="service-arrow">→</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT SECTION ===== -->
+  <section class="contact-section" id="contact">
+    <div class="section-container contact-inner">
+      <p class="sub-headline" style="color: #306029;">Ready to collaborate?</p>
+      <h2 class="section-title large-cta">Let's create something<br /><em>remarkable</em> together.</h2>
+      <a href="mailto:hello@aura.studio" class="cta-btn large-btn" id="contact-cta">Get In Touch</a>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
   <footer class="footer">
     <div class="footer-inner">
-      <div class="footer-item">© 2026 SPREAD TECHNOLOGY</div>
-      
-      <!-- Animated Scroll Indicator -->
-      <div class="footer-item scroll-indicator">
-        <span class="scroll-dot"></span>
-        <span>Scroll to Explore</span>
+      <span class="nav-logo">aura.</span>
+      <span class="footer-copy">© 2026 Aura Studio. All rights reserved.</span>
+      <div class="footer-socials">
+        <a href="#" id="footer-instagram">Instagram</a>
+        <a href="#" id="footer-behance">Behance</a>
+        <a href="#" id="footer-linkedin">LinkedIn</a>
       </div>
-      
-      <!-- Dynamic Clock displaying London local time -->
-      <div class="footer-item time-display" id="time-display">LONDON, UK — --:--:-- GMT</div>
     </div>
   </footer>
 
-  <!-- Premium Interactions script -->
   <script src="script.js"></script>
 </body>
 </html>
